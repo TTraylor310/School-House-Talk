@@ -19,25 +19,26 @@ Coach and Admin have access to create new events, modify existing ones, and dele
 ### Setup
 
 Clone down back-end from GitHub repository
-`npm install`
+
+- `npm install`
     - installs dependencies required
-`npm run db:config` 
+- `npm run db:config` 
     - initializes the Postgres database local
     - make changes to './config/config.json' info:
         - username: "example1"
         - database: "school-house-talk"
         - dialect: "postgres"
-`npm run db:create`
+- `npm run db:create`
     - creates database in named './config/config.json'
-`npm run dev`
+- `npm run dev`
     - starts the server
-`npm run seed`
+- `npm run seed`
     - seeds postgres database with information
-`npm run socket`
+- `npm run socket`
     - creates socket server on designated port
-`npm run user`
+- `npm run user`
     - connects a user and allows for updates in sports chosen
-`npm run coach`
+- `npm run coach`
     - allows for info to be changed and updated
     - informs 'users' in that sport
     - updates database to reflect changes
