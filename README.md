@@ -2,51 +2,60 @@
 
 ### Authors:
 
+- Tim Traylor
 - Isaiah Keller
 - Luis Rosales
 - Stephen Martinez
 - Teresa Phillips
-- Tim Traylor
 
 ### Problem Domain
 
 School House Talk will act as a single source of truth for communication and information about school activities and events between faculty and parents.
 
-### Libraries, Packages, & System Requirements : AuthO, Node.JS, Axios, Base-64, BCrypt, Chance, Express, Heroku, Inquirer, Postgres, Sequelize, Jest, Socket.io, Socket.io-client, Supertest
+Coach and Admin have access to create new events, modify existing ones, and delete an event all together.
 
-### Links and Resources
-
-- [Project Deck](https://docs.google.com/presentation/d/1sjMvWgOLFNzgRsVHPoguDWuKrk0tR04XeYjH9Z0Gr2k/edit#slide=id.g2accd1c413_3_31)
-- [Trello](https://trello.com/w/cf401team)
-- [Software Requirements](/requirements.md)
-- [ci/cd](https://github.com/Team-Midterm/School-House-Talk/actions) (GitHub Actions)
-- [back-end server url](https://school-house-talk.herokuapp.com/)
+### Libraries, Packages, & System Requirements : AuthO, Node.JS, Axios, Base-64, BCrypt, Chance, Express, Inquirer, Postgres, Sequelize, Jest, Socket.io, Socket.io-client, Supertest
 
 ### Setup
 
-Clone down back-end from GitHub repository, Npm i, Npm start, Add an .env to the .gitIgnore with the user's access keys to the server and any needed library access keys.
+Clone down back-end from GitHub repository
+`npm install`
+    - installs dependencies required
+`npm run db:config` 
+    - initializes the Postgres database local
+    - make changes to './config/config.json' info:
+        - username: "example1"
+        - database: "school-house-talk"
+        - dialect: "postgres"
+`npm run db:create`
+    - creates database in named './config/config.json'
+`npm run dev`
+    - starts the server
+`npm run seed`
+    - seeds postgres database with information
+`npm run socket`
+    - creates socket server on designated port
+`npm run user`
+    - connects a user and allows for updates in sports chosen
+`npm run coach`
+    - allows for info to be changed and updated
+    - informs 'users' in that sport
+    - updates database to reflect changes
 
-i.e.
+
+## ENV info
 
 - `PORT` - Port Number
-- `DATABASE_URL` - postgres://iswraxdqfirlkz:5a589debab9fa279c8d43d5ae923fac1f9d12782292e10a42ad405532957bfe6@ec2-52-3-200-138.compute-1.amazonaws.com:5432/d954q9p4g621aj
+- `DATABASE_URL` - postgres://username:password@localhost:5432/school-house-talk
+- `SECRET` - string
 
-### How to initialize/run your application (where applicable)
-
-- npm i
-- npm start
-- start server
-- start postgres in another terminal
-- start seq
-
-### How to use your library (where applicable)
 
 ### Features
 
-*An admin can create events which will send event announcements to the specific sport
-*A coach can update information for all events which will send event announcements to the specific sport
-*Students/parents will be able to view updates to rooms they are subscribed to
-*Teachers will receive all announcements and updates
+* An admin can create events which will send event announcements to the specific sport
+* A coach can update information for all events which will send event announcements to the specific sport
+* Students/parents will be able to view updates to rooms they are subscribed to
+* Teachers will receive all announcements and updates
 
 #### MVP
 
@@ -57,14 +66,10 @@ i.e.
 
 ### UML
 
-![MVP UML](./assets/Midterm%20MVP%20UML.png)
+[MVP UML](./assets/Midterm%20MVP%20UML.png)
 
 ### Tests
 
 - How do you run tests? 
 
 NPM test
-
-- Any tests of note?
-
-- Describe any tests that you did not complete, skipped, etc
