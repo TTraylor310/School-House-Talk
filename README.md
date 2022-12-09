@@ -1,4 +1,10 @@
-## School House Talk
+# School House Talk - Node.js
+
+## Problem Domain
+
+School House Talk will act as a single source of truth for communication and information about school activities and events between faculty and parents.
+
+Coach and Admin have access to create new events, modify existing ones, and delete an event all together.
 
 ### Authors:
 
@@ -7,12 +13,6 @@
 - Luis Rosales
 - Stephen Martinez
 - Teresa Phillips
-
-### Problem Domain
-
-School House Talk will act as a single source of truth for communication and information about school activities and events between faculty and parents.
-
-Coach and Admin have access to create new events, modify existing ones, and delete an event all together.
 
 ### Libraries, Packages, & System Requirements : AuthO, Node.JS, Axios, Base-64, BCrypt, Chance, Express, Inquirer, Postgres, Sequelize, Jest, Socket.io, Socket.io-client, Supertest
 
