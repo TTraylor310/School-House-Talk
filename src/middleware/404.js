@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function (err, req, res, next) {
   const error = err.message ? err.message : err;
 
@@ -11,4 +9,3 @@ module.exports = function (err, req, res, next) {
 
   res.status(404).json(errObject);
 };
-

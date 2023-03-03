@@ -1,7 +1,5 @@
-'use strict';
-
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define('student', {
+  return sequelize.define("student", {
     studentID: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     studentSport: {
       type: DataTypes.ENUM,
-      values: ['Football', 'Baseball', 'Basketball', 'Soccer'],
+      values: ["Football", "Baseball", "Basketball", "Soccer"],
       allowNull: true,
     },
   });

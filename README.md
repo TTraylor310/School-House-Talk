@@ -48,7 +48,6 @@ Clone down back-end from GitHub repository
 
 - `PORT` - Port Number
 - `DATABASE_URL` - postgres://username:password@localhost:5432/school-house-talk
-- `SECRET` - string
 
 
 ### Features
@@ -71,6 +70,4 @@ Clone down back-end from GitHub repository
 
 ### Tests
 
-- How do you run tests? 
-
-NPM test
+Tests using Jest to provide coverage of more than 50%
